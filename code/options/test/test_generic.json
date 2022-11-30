@@ -1,0 +1,45 @@
+{
+  "name": "CHIMLE_Generic_Image_To_Image_Translation",
+  "use_tb_logger": true,
+  "model": "CHIMLE",
+  "levels": 4,
+  "task": "Generic",
+  "gpu_ids": [
+    0
+  ],
+  "multiple": 10,
+  "datasets": {
+    "test": {
+      "name": "Test",
+      "mode": "LRHR",
+      "crop_size": 256,
+      "dataroot_HR": "/path/to/test/target/images",
+      "dataroot_LR": "/path/to/test/input/images"
+    }
+  },
+  "path": {
+    "root": "/path/to/CHIMLE/",
+    "pretrain_model_G": "/path/to/trained/model.pth"
+  },
+  "network_G": {
+    "which_model_G": "TIM",
+    "num_dense_channels": [
+      256,
+      192,
+      128,
+      64
+    ],
+    "num_residual_channels": [
+      128,
+      64,
+      64,
+      64
+    ],
+    "num_blocks": 6,
+    "in_nc": 3,
+    "out_nc": 3,
+    "code_nc": 5,
+    "map_nc": 128,
+    "latent_nc": 512
+  }
+}

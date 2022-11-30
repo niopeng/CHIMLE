@@ -1,0 +1,44 @@
+{
+  "name": "CHIMLE_x16_Super_Resolution",
+  "use_tb_logger": true,
+  "model": "CHIMLE",
+  "levels": 4,
+  "task": "Super_Resolution",
+  "gpu_ids": [
+    0
+  ],
+  "multiple": 10,
+  "datasets": {
+    "test": {
+      "name": "Test",
+      "mode": "LRHR",
+      "dataroot_HR": "/path/to/test/512x512/target/images",
+      "dataroot_LR": "/path/to/test/32x32/input/images"
+    }
+  },
+  "path": {
+    "root": "/path/to/CHIMLE",
+    "pretrain_model_G": "/path/to/trained/model.pth"
+  },
+  "network_G": {
+    "which_model_G": "TIM",
+    "num_dense_channels": [
+      256,
+      192,
+      128,
+      64
+    ],
+    "num_residual_channels": [
+      128,
+      64,
+      64,
+      64
+    ],
+    "num_blocks": 6,
+    "in_nc": 3,
+    "out_nc": 3,
+    "code_nc": 5,
+    "map_nc": 128,
+    "latent_nc": 512
+  }
+}
