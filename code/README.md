@@ -1,6 +1,7 @@
 # CHIMLE
 
-[Project Page][project] | [Video][video] | [Paper][paper] | [Pre-trained Models](/experiments/pretrained_models)
+[Project Page][project] | [Video][video] | [Paper][paper] | [Pre-trained Models](/experiments/pretrained_models) | Demo [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/niopeng/CHIMLE/blob/main/Demo/CHIMLE_demo.ipynb)
+
 
 PyTorch implementation of "CHIMLE: Conditional Hierarchical IMLE for Multimodal Conditional Image Synthesis" (NeurIPS 2022).
 CHIMLE is able to:
